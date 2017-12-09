@@ -1,11 +1,11 @@
 /* IMPORTANT: class must not be public. */
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
-import java.util.Hashtable;
+import java.util.List;
 import java.util.Map;
-import java.util.StringTokenizer;
+import java.util.TreeMap;
 
 class TestClass {
     public static void main(String args[] ) throws Exception {
@@ -69,6 +69,50 @@ class TestClass {
     		System.out.println("in finalllyyyyy ");
     		
     	}
+    	
+    	
+    	TreeMap<String, String>  map = new TreeMap<String, String>();
+    	
+    	
+    	map.put("akshay","akshay");
+    	map.put("gaurav","gaurav");
+    	map.put("yash","yash");
+    	
+    	System.out.println(map);
+    	
+    	
+    	
+    	
+    	
+    	List<Integer> list = new ArrayList<Integer>();
+    	
+    	list.add(2);
+    	list.add(5);
+    	list.add(4);
+    	
+    	Collections.sort(list);
+    	list.get(list.size()-2);
+    	
+    
+    	System.out.println(list.get(list.size()-2));
+    	
+    	
+    	int secondLargest = (int) list.get(0);
+    	int largest = list.get(0);
+    	for (int i = 1; i < list.size(); i++) {
+    	  if(list.get(i) > largest) {
+    	    secondLargest = largest;
+    	    largest = list.get(i);
+    	  }
+    	  if(list.get(i) > secondLargest && list.get(i) != largest) {
+    	    secondLargest = list.get(i);
+    	  }
+    	}
+    	System.out.print("Second biggest number ----> "+secondLargest);
+ 
+    	
+    	
+     	
 
     }
 }
